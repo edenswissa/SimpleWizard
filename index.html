@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ninjathonWizard</title>
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+          crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ManagerFormStyle.css">
+    <link rel="stylesheet" href="EventFormStyle.css">
+    <link rel="stylesheet" href="supportStyle.css">
+    <link rel="stylesheet" href="DoneStyle.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="white-box">
+    <h2>Ninjathon Wizard</h2>
+        <div class="row bs-wizard" style="border-bottom:0;">
+
+        <div class="col-xs-3 bs-wizard-step active" id="step-one">
+            <div class="text-center bs-wizard-stepnum">Step 1</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Manager Information</div>
+        </div>
+
+        <div class="col-xs-3 bs-wizard-step disabled" id="step-two">
+            <div class="text-center bs-wizard-stepnum">Step 2</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Event Data</div>
+        </div>
+
+        <div class="col-xs-3 bs-wizard-step disabled" id="step-three">
+            <div class="text-center bs-wizard-stepnum">Step 3</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Support Team</div>
+        </div>
+
+        <div class="col-xs-3 bs-wizard-step disabled" id="step-four">
+            <div class="text-center bs-wizard-stepnum">Step 4</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Done!</div>
+        </div>
+    </div>
+
+
+    <div class="Manager">
+        <div class="form">
+            <h4 class="manager-head-instructions">Please insert manager information</h4>
+            <input type="text" id="managerFirstName" class="input-Manager" placeholder="First Name" required><br>
+            <input type="text" id="managerLastName" class="input-Manager" placeholder="Last Name"required><br>
+            <input type="email" id="managerEmail" class="input-Manager" placeholder="Email" required><br>
+            <input type="password" id="managerEmailPassword" class="input-Manager" placeholder="Password" required>
+            <div class="popup">
+                <img src="info_icon.png" id="infoIcon">
+                <span class="popuptext" id="infoPopup">At least 6 letters,
+                    one big letter and at least one number
+                </span>
+            </div><br>
+            <h5 class="password-error">Password was not entered correctly</h5>
+            <input type="tel" id="managerPhoneNumber" class="input-Manager" placeholder="Phone Number" required><br>
+            <input type="submit" value="Save and Continue" class="btn btn-warning" id="btn-Manager">
+        </div>
+    </div>
+    <div class="Event">
+        <div class="row">
+            <h4 class="event-head-instructions">Please insert event information</h4>
+            <div class="three columns">
+                <input type="text" class ="input-Event" id="eventName" placeholder="Event Name" />
+                <input type="text" class ="input-Event" id="eventAdress" placeholder="Adress" />
+            </div>
+            <div class="three columns">
+                <label>Date and Time: </label>&nbsp;
+                <input type="datetime-local" id="eventDate" class ="input-Event" placeholder="Date" />
+            </div>
+            <div class="three columns">
+                <input type="number" class ="input-Event" id="eventNumberOfTeams" placeholder="Number of teams" />
+                <input type="number" class ="input-Event" id="eventNumberOfStudentsInTeam" placeholder="Students in the team" />
+            </div>
+        </div>
+        <button class="btn btn-warning" id="btn-Event">next</button>
+    </div>
+    <div class="Support">
+        <div class="row">
+            <h4 class="support-head-instructions">Please insert support team information</h4>
+            <div class="three columns">
+                <input type="email" id="supportEmail" class ="input-Support" placeholder="Support Email" />
+            </div>
+            <div class="three columns">
+                <input type="password" id="supportEmailPassword" class ="input-Support" placeholder="Email Password" />
+            </div>
+        </div>
+        <button class="btn btn-warning" id="btn-Support">next</button>
+    </div>
+    <div class="Done">
+        <h4 class="done-head-instructions">Great! we have all we need, now you can start to work.</h4>
+        <img class="checkImg" src="check-icon.png"/>
+        <button class="btn btn-warning" id="btn-Done">Start!</button>
+    </div>
+</div>
+</body>
+</html>
