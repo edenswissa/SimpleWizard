@@ -1,0 +1,18 @@
+.Done
+{
+    display: none;
+    text-align: center;
+}
+
+.checkImg
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+}
+
+.done-head-instructions
+{
+    color: #aaaaaa;
+}
